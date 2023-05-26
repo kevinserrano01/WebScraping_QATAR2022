@@ -45,7 +45,7 @@ def crawl(url):
         )
 
         # Exportamos los datos a un archivo CVS(excel)
-        content.to_csv('Clasificacion_Mundial.cvs', index=False)  # Sin guardar el ID
+        content.to_csv('Clasificacion_Mundial.csv', index=False)  # Sin guardar el ID
 
         return content
 
