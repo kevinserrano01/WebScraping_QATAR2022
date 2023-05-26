@@ -12,7 +12,7 @@ def crawl(url):
         # Identificar elementos html
         soup = BeautifulSoup(data.content, "html.parser")
 
-        # Equipos de la web
+        # EQUIPOS EN LA WEB
         equiposAll = soup.find_all('span', class_='nombre-equipo')
 
         # Lista vacia para guardar solamente los nombres de los equipos
@@ -20,8 +20,19 @@ def crawl(url):
 
         count = 0
         for equipo in equiposAll:
-            if count < 20:  # Los primeros 10
+            if count < 20:  # Los primeros 20
                 equiposExtraidos.append(equipo.text)
+                count += 1
+            else:
+                break
+
+        # PUNTOS EN LA WEB
+        puntosWeb = soup.find_all('td', class_='destacado')
+        puntosExtraidos = []
+        count = 0
+        for punto in puntosWeb:
+            if count < 20:
+                puntosExtraidos.append(punto.text)
                 count += 1
             else:
                 break
