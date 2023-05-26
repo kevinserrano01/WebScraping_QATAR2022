@@ -48,3 +48,8 @@ def crawl(url):
         content.to_csv('Clasificacion_Mundial.cvs', index=False)  # Sin guardar el ID
 
         return content
+
+# URL inicial para comenzar el crawling
+url = "https://argentina.as.com/resultados/futbol/mundial/2022/clasificacion/"
+
+print(crawl(url))
