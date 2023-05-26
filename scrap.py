@@ -11,3 +11,6 @@ def crawl(url):
 
         # Identificar elementos html
         soup = BeautifulSoup(data.content, "html.parser")
+
+        # Equipos
+        equiposAll = soup.find_all('span', class_='nombre-equipo')
