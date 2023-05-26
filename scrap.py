@@ -17,3 +17,11 @@ def crawl(url):
 
         # Lista vacia para guardar solamente los nombres de los equipos
         equiposExtraidos = []
+
+        count = 0
+        for equipo in equiposAll:
+            if count < 20:  # Los primeros 10
+                equiposExtraidos.append(equipo.text)
+                count += 1
+            else:
+                break
