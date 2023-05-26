@@ -8,3 +8,6 @@ def crawl(url):
     # Comprobar si la solicitud fue exitosa (código de estado 200)
     if response.status_code == 200:
         data = requests.get(url)
+
+        # Identificar elementos html
+        soup = BeautifulSoup(data.content, "html.parser")
