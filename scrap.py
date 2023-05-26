@@ -36,3 +36,10 @@ def crawl(url):
                 count += 1
             else:
                 break
+
+        content = pd.DataFrame({
+            "Nombre": equiposExtraidos,
+            "Puntos": puntosExtraidos,
+        },
+            index=list(range(1, 21))  # ID
+        )
